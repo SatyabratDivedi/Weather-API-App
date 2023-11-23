@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="app-container" id="darkmodeHere">
+      <div class="app-top-bar">
+        <h1 class="app-heading">Weather App</h1>
+        <button id="darkmode" class="button button-small"></button>
+      </div>
+      <div class="app-content">
+        <button class="button button-block">
+          <input type="search" id="searchBox" name="" placeholder="type any city name">
+          <div class="button button-small"><i onclick="fetchWeatherData()" class="material-icons">search</i>
+          </div>
+        </button>
+        <h2 class="weather-report-main">
+          <span id="weatherReport">Weather Report</span>
+        </h2>
+        <div class="main-container">
+          <div class="main-box">
+            <button class="button button-larger city-main">
+              <img id="icon" src="img/clear.png" class="main-img" alt="">
+              <div class="city-box">
+                <span id="cityName">City Name</span>
+              </div>
+            </button>
+            <button id="tempbox" class="button button-link tempbox">0 &#8451</button>
+          </div>
+          <br><br>
+          <div class="flex-button-container">
+            <button class="button button-large box-left">
+              <div>
+                <img src="img/wind-svg-svgrepo-com.svg" style="width: 50px;" alt="">
+              </div>
+              <span id="windspeed" class="windtext">0 km/h</span>
+              <span>Wind</span>
+            </button>
+            <button class="button button-large box-left">
+              <div>
+                <img src="img/humidity-svgrepo-com.svg" style="width: 50px;" alt="">
+              </div>
+              <span id="humidity" class="windtext">0 %</span>
+              <span>Humidity</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
